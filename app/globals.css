@@ -242,3 +242,9 @@ display: block;
 .mylogo{
   margin-bottom: 10px;
 }
+.z-10.w-full.max-w-5xl.items-center.justify-between.font-mono.text-sm.lg\:flex {
+  z-index: 0;
+}
+.mylogourl{
+  z-index: 0;
+}
