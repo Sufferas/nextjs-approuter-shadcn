@@ -74,7 +74,7 @@ const Page: React.FC = () => {
                               <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
                                   <div className="chakra-stack css-27fr1v">
                                       <div className="css-10rjqys">
-                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                          <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                               <circle cx="12" cy="12" r="10"></circle>
                                               <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
                                               <line x1="9" y1="9" x2="9.01" y2="9"></line>
@@ -90,7 +90,7 @@ const Page: React.FC = () => {
                               <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
                                   <div className="chakra-stack css-27fr1v">
                                       <div className="css-10rjqys">
-                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                          <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round"  focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                               <line x1="4" y1="21" x2="4" y2="14"></line>
                                               <line x1="4" y1="10" x2="4" y2="3"></line>
                                               <line x1="12" y1="21" x2="12" y2="12"></line>
@@ -111,7 +111,7 @@ const Page: React.FC = () => {
                               <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
                                   <div className="chakra-stack css-27fr1v">
                                       <div className="css-10rjqys">
-                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                          <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                               <rect x="3" y="3" width="7" height="7"></rect>
                                               <rect x="14" y="3" width="7" height="7"></rect>
                                               <rect x="14" y="14" width="7" height="7"></rect>
