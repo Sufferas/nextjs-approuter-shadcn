@@ -104,7 +104,7 @@ const ImageUpload: React.FC = () => {
                         Original Width: {width}px | Original Height: {height}px
                     </p>
                     {/* Hier werden die skalierten Breite und Höhe angezeigt */}
-                    <p>
+                    <p style={{ marginBottom: '20px' }}>
                         Width: {scaledWidth?.toFixed(2)}px | Height: {scaledHeight?.toFixed(2)}px
                     </p>
                     <img src={image} alt="Uploaded preview" id="uploaded-image" />

@@ -1,35 +1,138 @@
-// "use client"; // This is a client component 👈🏽
-// import React, {useState, ChangeEvent} from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
+import '../css/style1.css'
+import '../css/style2.css'
+import '../css/style3.css'
+import '../css/style4.css'
 import React from 'react';
-import ImageUpload from '../components/ImageUpload'; // Pfad entsprechend anpassen
 
 const Page: React.FC = () => {
-  return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-          <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-              <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                  ResizeRover
-              </p>
+  // @ts-ignore
+    return (
+
+      <main className="chakra-ui-dark">
+          <div className="css-ohwg9z">
+              <div className="chakra-container css-188j5z7">
+                  <div className="chakra-stack css-lt20f">
+                      <div id="home" className="css-1ktc0u0">
+                          <div className="chakra-container css-vhc7ah">
+                              <div className="chakra-stack css-1bqfdcd">
+                                  <h1 className="chakra-text css-1gmj64d">
+                                      <div style={{
+                                          opacity: 1,
+                                          transform: 'translateY(0px) scale(1) translateZ(0px)'
+                                      }} className="css-0">
+                                          Scale and Change
+                                          <span className="css-0"><br/></span> your Image</div>
+                                  </h1>
+                                  <div className="chakra-text css-rl4bcm">
+
+                                      <div style={{
+                                          opacity: 1,
+                                          transform: 'translateY(0px) scale(1) translateZ(0px)'
+                                      }} className="css-1bsgmhw"></div>
+
+                                      On this page, you can scale images, change formats, and place logos within your pictures.
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      <div className="css-ziep4m">
+                          <div
+                              style={{
+                                  opacity: 1,
+                                  transform: 'translateY(0px) scale(1) translateZ(0px)'
+                              }}
+                              className="css-0"
+                          >
+
+                              <div className="css-v89234">
+                                  <Image
+                                      alt="AI. do you now how"
+                                      src="/home_image.jfif"
+                                      width={1200}
+                                      height={762}
+                                      decoding="async"
+                                      style={{ color: "transparent" }}
+                                  />
+
+                              </div>
+                          </div>
+                      </div>
+
+                      </div>
 
 
-              <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-                  <a className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 mylogourl"
-                     href="https://kuehhas.info"
-                     target="_blank"
-                     rel="noopener noreferrer">
-                      <Image src="/logo_info.webp" alt="Vercel Logo" className="mylogo"  width={160} height={105} priority />
-                  </a>
-                  <a className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0">
-                      <Image src="/next.svg" alt="Vercel Logo" className="dark:invert" width={150} height={48} priority />
-                  </a>
+                  </div>
+              </div>
 
+          <div id="benefits" className="css-zzf9h2">
+              <div className="chakra-container css-1pyds5b">
+                  <div className="chakra-stack css-i1iwfd">
+                      <div className="chakra-stack css-u2tusj">
+                          <div className="css-1xk03wa">
+                              <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
+                                  <div className="chakra-stack css-27fr1v">
+                                      <div className="css-10rjqys">
+                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <circle cx="12" cy="12" r="10"></circle>
+                                              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                          </svg>
+                                      </div>
+                                      <div className="css-0">
+                                          <h2 className="chakra-heading css-awqvv2">Scale</h2>
+                                          <p className="chakra-text css-rtpycv">You can view the size of the image in real-time, as well as zoom in and out. Additionally, you can read the width and height values of the image.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
+                                  <div className="chakra-stack css-27fr1v">
+                                      <div className="css-10rjqys">
+                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <line x1="4" y1="21" x2="4" y2="14"></line>
+                                              <line x1="4" y1="10" x2="4" y2="3"></line>
+                                              <line x1="12" y1="21" x2="12" y2="12"></line>
+                                              <line x1="12" y1="8" x2="12" y2="3"></line>
+                                              <line x1="20" y1="21" x2="20" y2="16"></line>
+                                              <line x1="20" y1="12" x2="20" y2="3"></line>
+                                              <line x1="1" y1="14" x2="7" y2="14"></line>
+                                              <line x1="9" y1="8" x2="15" y2="8"></line>
+                                              <line x1="17" y1="16" x2="23" y2="16"></line>
+                                          </svg>
+                                      </div>
+                                      <div className="css-0">
+                                          <h2 className="chakra-heading css-awqvv2">Format</h2>
+                                          <p className="chakra-text css-rtpycv">You can compress the images or specify the maximum size allowed for the images. Additionally, you can choose a format that you prefer for the images.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div className="css-0" style={{ opacity: 1, transform: 'translateY(0px) scale(1) translateZ(0px)' }}>
+                                  <div className="chakra-stack css-27fr1v">
+                                      <div className="css-10rjqys">
+                                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" focusable="false" className="chakra-icon css-s48i3l" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                              <rect x="3" y="3" width="7" height="7"></rect>
+                                              <rect x="14" y="3" width="7" height="7"></rect>
+                                              <rect x="14" y="14" width="7" height="7"></rect>
+                                              <rect x="3" y="14" width="7" height="7"></rect>
+                                          </svg>
+                                      </div>
+                                      <div className="css-0">
+                                          <h2 className="chakra-heading css-awqvv2">Watermark</h2>
+                                          <p className="chakra-text css-rtpycv">Place a watermark over your images, so everyone knows that they belong to you.</p>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
-        <ImageUpload />
-        {/* Rest des Codes ... */}
+
       </main>
+
   );
 };
 

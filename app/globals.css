@@ -67,7 +67,7 @@
     --ring: 217.2 32.6% 17.5%;
   }
 }
-
+@import url(https://db.onlinewebfonts.com/c/c07d5c6528b6cc0eac08afd7a3199657?family=TrajanPro-Regular);
 .custom-bg {
   background: linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(186.67deg, rgba(56, 0, 169, 0.2) 17.55%, rgba(56, 0, 169, 0.2) 21.02%, rgba(58, 19, 255, 0) 91.62%), #13111C;
   background-origin: border-box;
@@ -111,7 +111,7 @@ img, video {
 .anpassungen{
   font-size: 18px;
   margin-bottom: 10px;
-  margin-top: -143px;
+  margin-top: 20px;
 }
 .headerbutton{
   font-weight: 600;
@@ -250,9 +250,6 @@ font-size: 30px;
 }
 
 @media (max-width: 1023px){
-  .anpassungen{
-    margin-top: 60px;
-  }
   .fixed.bottom-0.left-0.flex.h-48.w-full.items-end.justify-center.bg-gradient-to-t.from-white.via-white.dark\:from-black.dark\:via-black.lg\:static.lg\:h-auto.lg\:w-auto.lg\:bg-none {
     display: inline-flex;
   }
@@ -263,3 +260,83 @@ font-size: 30px;
     pointer-events: painted;
   }
 }
+.h-16 {
+  height: 5rem;
+}
+.mylogo {
+   margin-bottom: 0px;
+ }
+
+.box {
+  overflow: hidden;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  transform: translate(-15%, -50%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: "TrajanPro-Regular";
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: "TrajanPro-Regular";
+}
+
+.buttons .btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.buttons .primary {
+  background-color: blue;
+  color: white;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 40px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.feature {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
