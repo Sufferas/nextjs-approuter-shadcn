@@ -64,7 +64,7 @@ const ImageUpload: React.FC = () => {
     }, [imageScale, width, height]);
 
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
 
             <p className="anpassungen">Adjust the image size:</p>
             <div className="button-group">

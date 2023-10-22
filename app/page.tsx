@@ -6,6 +6,7 @@ import '../css/style3.css'
 import '../css/style4.css'
 import React from 'react';
 
+
 const Page: React.FC = () => {
   // @ts-ignore
     return (
@@ -130,8 +131,9 @@ const Page: React.FC = () => {
                   </div>
               </div>
           </div>
-
       </main>
+
+
 
   );
 };

@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Suspense } from 'react';
 import Nav from './nav';
+import Fooder from '../components/fooder';
+
 
 
 
@@ -28,6 +30,7 @@ export default function RootLayout({
       </Suspense>
 
       {children}
+        <Fooder />
       </body>
     </html>
   )
