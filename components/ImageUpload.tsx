@@ -8,7 +8,6 @@ const ImageUpload: React.FC = () => {
     const [image, setImage] = useState<string | null>(null);
     const [width, setWidth] = useState<number | null>(null);
     const [height, setHeight] = useState<number | null>(null);
-    // Zustand für die skalierten Abmessungen
     const [scaledWidth, setScaledWidth] = useState<number | null>(null);
     const [scaledHeight, setScaledHeight] = useState<number | null>(null);
 
@@ -16,6 +15,14 @@ const ImageUpload: React.FC = () => {
         const file = e.target.files?.[0];
         if (!file) return;
 
+        // Überprüfen, ob die Datei ein Bild ist
+        if (!file.type.startsWith('image/')) {
+            alert('Please upload an image file.');
+            return;
+        }
+
+        // Zurücksetzen der Skalierung auf die Originalgröße
+        setImageScale(100);
         // Set image URL
         const imageURL = URL.createObjectURL(file);
         setImage(imageURL);
@@ -64,7 +71,7 @@ const ImageUpload: React.FC = () => {
     }, [imageScale, width, height]);
 
     return (
-        <div style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
+        <div style={{ }}>
 
             <p className="anpassungen">Adjust the image size:</p>
             <div className="button-group">

@@ -96,7 +96,7 @@ img, video {
 
 .button-group {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   gap: 20px; /* Abstand zwischen den Button-Gruppen */
 }
 
