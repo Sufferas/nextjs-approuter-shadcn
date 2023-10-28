@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import {fontSizeResolver} from "@mantine/core/lib/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver";
 
 const ImageWatermark = () => {
-    const [images, setImages] = useState([]);
+
     const [logo, setLogo] = useState(null);
     // const [previewImages, setPreviewImages] = useState([]);
     const [horizontalPosition, setHorizontalPosition] = useState('center');
@@ -14,6 +14,10 @@ const ImageWatermark = () => {
     const [logoOpacity, setLogoOpacity] = useState(1); // 1 means fully opaque
 
     const [previewImages, setPreviewImages] = useState<string[]>([]);
+
+    const [images, setImages] = useState<File[]>([]);
+    const [uploadedImages, setUploadedImages] = useState<string[]>([]);
+
 
 
     const createWatermark = () => {
@@ -83,7 +87,6 @@ const ImageWatermark = () => {
         });
     };
 
-    const [uploadedImages, setUploadedImages] = useState([]);
 
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
