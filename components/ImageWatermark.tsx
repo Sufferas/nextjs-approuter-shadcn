@@ -7,11 +7,13 @@ import {fontSizeResolver} from "@mantine/core/lib/core/Box/style-props/resolvers
 const ImageWatermark = () => {
     const [images, setImages] = useState([]);
     const [logo, setLogo] = useState(null);
-    const [previewImages, setPreviewImages] = useState([]);
+    // const [previewImages, setPreviewImages] = useState([]);
     const [horizontalPosition, setHorizontalPosition] = useState('center');
     const [verticalPosition, setVerticalPosition] = useState('center');
     const [logoScale, setLogoScale] = useState(0.5); // 0.1 means 10%
     const [logoOpacity, setLogoOpacity] = useState(1); // 1 means fully opaque
+
+    const [previewImages, setPreviewImages] = useState<string[]>([]);
 
 
     const createWatermark = () => {
