@@ -136,9 +136,13 @@ const ImageWatermark = () => {
             img.onload = () => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
+                if (ctx !== null) {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                } else {
+                    console.error('Unable to get canvas context');
+                }
 
                 let quality = 0.9;
                 let newImageUrl;
