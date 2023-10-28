@@ -147,7 +147,9 @@ const ImageWatermark = () => {
 
         filesToDownload.forEach((file, index) => {
             let img = new Image();
-            img.src = isWatermarked ? file : URL.createObjectURL(file);
+            img.src = isWatermarked
+                ? file as string
+                : URL.createObjectURL(file as File);
 
             img.onload = () => {
                 const canvas = document.createElement('canvas');
