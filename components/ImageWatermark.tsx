@@ -87,13 +87,14 @@ const ImageWatermark = () => {
 
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
-            const newImages = [...e.target.files];
+            const newImages = Array.from(e.target.files); // Konvertiert FileList in ein Array
             setImages(newImages);
 
             const newImageUrls = newImages.map((file) => URL.createObjectURL(file));
             setUploadedImages(newImageUrls);
         }
     };
+
 
     const removeImage = (indexToRemove) => {
         setImages((prevImages) => prevImages.filter((_, index) => index !== indexToRemove));
