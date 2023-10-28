@@ -211,7 +211,11 @@ const ImageWatermark = () => {
                         id="logo"
                         name="logo"
                         accept="image/*"
-                        onChange={(e) => setLogo(e.target.files[0])}
+                        onChange={(e) => {
+                            if (e.target.files && e.target.files.length > 0) {
+                                setLogo(e.target.files[0]);
+                            }
+                        }}
                         className={"fileInput"}
                     />
                 </div>
