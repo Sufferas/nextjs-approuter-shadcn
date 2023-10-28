@@ -8,7 +8,8 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Scale', href: '/scaleimage' }
+  { name: 'Scale', href: '/scaleimage' },
+  { name: 'Resize', href: '/resizeimage' }
 ];
 
 function classNames(...classes: string[]) {

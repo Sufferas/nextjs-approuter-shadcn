@@ -24,7 +24,7 @@ export default () => {
             items: [
                 {
                     href: 'https://kuehhas.at/',
-                    name: 'Kühhas',
+                    name: 'OK Projekt & Verwaltung GmbH',
                     target: '_blank',
                     rel: 'noopener noreferrer'
                 },

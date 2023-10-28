@@ -1,0 +1,321 @@
+.uploadButton {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.uploadButton input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fileInput {
+    width: 100%;
+    height: 100%;
+}
+
+.uploadButton label {
+    margin: 0;
+}
+
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    min-width: 204px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    max-width: 205px;
+}
+
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+
+.button-64 label {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.button-64:hover label {
+    background: none;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+        font-size: 24px;
+        min-width: 204px;
+    }
+}
+
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: #23303f;
+    background-image: none;
+    cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+/* Custom Select wrapper */
+.select {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+/* Arrow */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #34495e;
+    transition: 0.25s all ease;
+    pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+    color: #f39c12;
+}
+
+.selector-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Stellen Sie sicher, dass Ihr CSS für den Slider korrekt ist, z.B.: */
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: #ffffff;
+    outline: none;
+    /* Weitere Styles hier... */
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0348a6;
+    cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0348a6;
+    cursor: pointer;
+}
+
+
+
+/* Stellen Sie sicher, dass Ihr CSS für den Slider korrekt ist, z.B.: */
+.range2 {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: #ffffff;
+    outline: none;
+    /* Weitere Styles hier... */
+}
+
+.range2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0348a6;
+    cursor: pointer;
+}
+
+.range2::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0348a6;
+    cursor: pointer;
+}
+
+
+/* Styles für das Label, das den aktuellen Wert anzeigt */
+.sliderValue {
+    position: relative;
+    bottom: -10px;
+    background-color: #353333;
+    padding: 5px;
+    border-radius: 7px;
+    text-align: center;
+    width: 50px;
+}
+
+.cntr {
+    max-width: 175px;
+}
+
+.button-65 {
+    align-items: center;
+    background-image: linear-gradient(144deg, #ff405d, #425ff3 50%, #00eb27);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(65, 252, 146, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-65:active,
+.button-65:hover {
+    outline: 0;
+}
+
+.button-65 span {
+    background-color: rgb(5, 8, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-65:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .button-65 {
+        font-size: 24px;
+        min-width: 196px;
+    }
+}
+.place-self-center{
+    margin-top: 50px;
+}
+
+.button-66 {
+    align-items: center;
+    background-image: linear-gradient(144deg, #4dff40, #89f342 50%, #a8eb00);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(65, 252, 146, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-66:active,
+.button-66:hover {
+    outline: 0;
+}
+
+.button-66 span {
+    background-color: rgb(5, 8, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-65:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .button-66 {
+        font-size: 24px;
+        min-width: 196px;
+    }
+}
