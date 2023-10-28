@@ -135,7 +135,7 @@ const ImageWatermark = () => {
     const [selectedFormat, setSelectedFormat] = useState('image/jpeg');
 
 
-    const downloadImages = (isWatermarked) => {
+    const downloadImages = (isWatermarked: boolean) => {
         const baseName = prompt("Please enter the base name for the downloaded images:");
 
         if (baseName === null || baseName.trim() === "") {
