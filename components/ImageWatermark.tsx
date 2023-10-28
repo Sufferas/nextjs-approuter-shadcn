@@ -17,7 +17,7 @@ const ImageWatermark = () => {
     const createWatermark = () => {
 
         if (!logo) { // Überprüfen, ob das Logo nicht existiert
-            alert('Es wurde kein Wasserzeichen hinzugefügt!'); // Ein Alert anzeigen, wenn kein Logo vorhanden ist
+            alert('No watermark has been added!'); // Ein Alert anzeigen, wenn kein Logo vorhanden ist
             return; // Frühzeitig aus der Funktion aussteigen, wenn kein Logo vorhanden ist
         }
         setPreviewImages([]);
@@ -29,10 +29,14 @@ const ImageWatermark = () => {
             image.onload = () => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
-                canvas.width = image.width;
-                canvas.height = image.height;
+                if (ctx !== null) {
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    ctx.drawImage(image, 0, 0);
+                } else {
+                    console.error('Unable to get canvas context');
+                }
 
-                ctx.drawImage(image, 0, 0);
 
                 const watermark = new Image();
                 watermark.src = URL.createObjectURL(logo);
@@ -61,9 +65,13 @@ const ImageWatermark = () => {
 
 
 
-                    ctx.globalAlpha = logoOpacity; // Set the opacity
-                    ctx.drawImage(watermark, x, y, scaledWidth, scaledHeight);
-                    ctx.globalAlpha = 1; // Reset the opacity
+                    if (ctx !== null) {
+                        ctx.globalAlpha = logoOpacity; // Set the opacity
+                        ctx.drawImage(watermark, x, y, scaledWidth, scaledHeight);
+                        ctx.globalAlpha = 1; // Reset the opacity
+                    } else {
+                        console.error('Unable to get canvas context');
+                    }
 
                     const watermarkedImage = canvas.toDataURL('image/jpeg');
                     setPreviewImages((prevImages) => [...prevImages, watermarkedImage]);
@@ -120,10 +128,10 @@ const ImageWatermark = () => {
 
 
     const downloadImages = (isWatermarked) => {
-        const baseName = prompt("Bitte geben Sie den Basisnamen für die heruntergeladenen Bilder ein:");
+        const baseName = prompt("Please enter the base name for the downloaded images:");
 
         if (baseName === null || baseName.trim() === "") {
-            alert("Bitte geben Sie einen gültigen Namen ein.");
+            alert("Please enter a valid name.");
             return;
         }
 
