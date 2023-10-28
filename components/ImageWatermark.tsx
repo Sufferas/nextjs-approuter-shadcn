@@ -99,7 +99,7 @@ const ImageWatermark = () => {
     };
 
 
-    const removeImage = (indexToRemove) => {
+    const removeImage = (indexToRemove: number) => {
         setImages((prevImages) => prevImages.filter((_, index) => index !== indexToRemove));
         setUploadedImages((prevUrls) => prevUrls.filter((_, index) => index !== indexToRemove));
     };
