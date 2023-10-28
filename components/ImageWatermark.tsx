@@ -85,12 +85,14 @@ const ImageWatermark = () => {
 
     const [uploadedImages, setUploadedImages] = useState([]);
 
-    const handleImageUpload = (e) => {
-        const newImages = [...e.target.files];
-        setImages(newImages);
+    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files) {
+            const newImages = [...e.target.files];
+            setImages(newImages);
 
-        const newImageUrls = newImages.map((file) => URL.createObjectURL(file));
-        setUploadedImages(newImageUrls);
+            const newImageUrls = newImages.map((file) => URL.createObjectURL(file));
+            setUploadedImages(newImageUrls);
+        }
     };
 
     const removeImage = (indexToRemove) => {
