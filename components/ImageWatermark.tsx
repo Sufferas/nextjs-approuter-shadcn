@@ -6,8 +6,6 @@ import {fontSizeResolver} from "@mantine/core/lib/core/Box/style-props/resolvers
 
 const ImageWatermark = () => {
 
-    const [logo, setLogo] = useState(null);
-    // const [previewImages, setPreviewImages] = useState([]);
     const [horizontalPosition, setHorizontalPosition] = useState('center');
     const [verticalPosition, setVerticalPosition] = useState('center');
     const [logoScale, setLogoScale] = useState(0.5); // 0.1 means 10%
@@ -17,6 +15,9 @@ const ImageWatermark = () => {
 
     const [images, setImages] = useState<File[]>([]);
     const [uploadedImages, setUploadedImages] = useState<string[]>([]);
+
+    const [logo, setLogo] = useState<File | null>(null);
+
 
 
 
@@ -214,6 +215,8 @@ const ImageWatermark = () => {
                         onChange={(e) => {
                             if (e.target.files && e.target.files.length > 0) {
                                 setLogo(e.target.files[0]);
+                            } else {
+                                setLogo(null);
                             }
                         }}
                         className={"fileInput"}
