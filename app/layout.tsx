@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Image Resizer by Kühhas',
   description: 'On this page, you can scale images, change formats, and place logos within your pictures.',
     creator: 'Alexander Kühhas MSc',
+    metadataBase: new URL('https://imageresizer.kuehhas.info'),
     manifest: '/manifest.json',
     icons: {apple: '/icon.png'},
     themeColor: '#fff',
