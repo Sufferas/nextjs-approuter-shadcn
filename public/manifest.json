@@ -1,0 +1,32 @@
+{
+    "theme_color": "#264cda",
+    "background_color": "#af1fae",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/https://imageresizer.kuehhas.info/",
+    "name": "Image Resizer by K\u00fchhas",
+    "short_name": "IResizer",
+    "description": "On this page, you can scale images, change formats, and place logos within your pictures.",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
