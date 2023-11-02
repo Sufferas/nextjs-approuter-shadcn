@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 export default () => {
 
     const footerNavs = [
@@ -53,7 +55,7 @@ export default () => {
             <div className="gap-6 justify-between md:flex">
                 <div className="flex-1">
                     <div className="max-w-xs">
-                        <img src="/logo_info.webp" alt={"Logo"} className="w-32" />
+                        <Image src="/logo_info_small_mobile.webp" alt="Kuehhas Logo" className="w-32"  width={128} height={84} priority />
                         <p className="leading-relaxed mt-2 text-[15px]">
                             This page is a subsidiary product of OK Projekt & Verwaltung GmbH and was developed by Alexander Kühhas. If you have any questions or ideas for further development, please do not hesitate to send a message.
                             <br/><br/>If you wish to support these projects further, a small donation would be greatly appreciated.

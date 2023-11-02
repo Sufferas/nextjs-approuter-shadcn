@@ -27,7 +27,7 @@ export default function Navbar({ user }: { user: any }) {
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image src="/logo_info.webp" alt="Vercel Logo" className="mylogo"  width={113} height={74} priority />
+                  <Image src="/logo_info_small_mobile.webp" alt="Vercel Logo" className="mylogo"  width={113} height={74} priority />
 
                 </div>
                 <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
