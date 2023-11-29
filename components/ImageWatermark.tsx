@@ -136,55 +136,70 @@ const ImageWatermark = () => {
     const [selectedFormat, setSelectedFormat] = useState('image/jpeg');
 
 
-    const downloadImages = (isWatermarked: boolean) => {
+    const downloadImages = async (isWatermarked: boolean) => {
         const baseName = prompt("Please enter the base name for the downloaded images:");
 
-        if (baseName === null || baseName.trim() === "") {
+        if (!baseName || baseName.trim() === "") {
             alert("Please enter a valid name.");
             return;
         }
 
         const filesToDownload = isWatermarked ? previewImages : images;
 
-        filesToDownload.forEach((file, index) => {
-            let img = new Image();
-            img.src = isWatermarked
-                ? file as string
-                : URL.createObjectURL(file as File);
+        for (const [index, file] of filesToDownload.entries()) {
+            const img = new Image();
+            img.src = isWatermarked ? file : URL.createObjectURL(file);
 
-            img.onload = () => {
+            await new Promise((resolve) => {
+                img.onload = resolve;
+            });
+
+            let scaleFactor = 1; // Start with no scaling
+            const fileSizeLimit = selectedFileSize === 'original' ? Infinity : parseInt(selectedFileSize);
+            let newImageUrl;
+            let currentFileSize;
+
+            do {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
-                if (ctx !== null) {
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    ctx.drawImage(img, 0, 0);
-                } else {
+                if (!ctx) {
                     console.error('Unable to get canvas context');
+                    break;
                 }
 
-                let quality = 0.9;
-                let newImageUrl;
-                const fileSize = selectedFileSize === 'original' ? Infinity : parseInt(selectedFileSize);
-                const format = selectedFormat.split('/')[1]; // Get the file extension
+                // Adjust canvas size based on scale factor
+                canvas.width = img.width * scaleFactor;
+                canvas.height = img.height * scaleFactor;
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-                do {
-                    newImageUrl = canvas.toDataURL(selectedFormat, quality);
-                    quality -= 0.1;
-                } while (newImageUrl.length / 1024 > fileSize && quality > 0);
+                newImageUrl = canvas.toDataURL(selectedFormat);
+                currentFileSize = newImageUrl.length / 1024; // Size in KB
 
-                const filename = `${baseName}_${index+1}.${format}`;
+                // Reduce scale factor for next iteration if file size is too large
+                if (currentFileSize > fileSizeLimit) {
+                    scaleFactor -= 0.05; // Decrease scale factor
+                }
+            } while (currentFileSize > fileSizeLimit && scaleFactor > 0);
 
-                const link = document.createElement('a');
-                link.href = newImageUrl;
-                link.download = filename;
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            };
-        });
+            if (currentFileSize > fileSizeLimit) {
+                alert(`Cannot reduce the image size to the desired level for ${baseName}_${index+1}`);
+                continue;
+            }
+
+            const format = selectedFormat.split('/')[1];
+            const filename = `${baseName}_${index+1}.${format}`;
+
+            const link = document.createElement('a');
+            link.href = newImageUrl;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     };
+
+
+
 
 
 
@@ -245,29 +260,6 @@ const ImageWatermark = () => {
             </div>
 
             <div className="selector-container">
-                {/*<label>*/}
-                {/*    Scale:*/}
-                {/*    <input*/}
-                {/*        type="range"*/}
-                {/*        min="0.01"*/}
-                {/*        max="1"*/}
-                {/*        step="0.01"*/}
-                {/*        value={logoScale}*/}
-                {/*        onChange={(e) => setLogoScale(e.target.value)}*/}
-
-                {/*    />*/}
-                {/*</label>*/}
-                {/*<label>*/}
-                {/*    Opacity:*/}
-                {/*    <input*/}
-                {/*        type="range"*/}
-                {/*        min="0"*/}
-                {/*        max="1"*/}
-                {/*        step="0.01"*/}
-                {/*        value={logoOpacity}*/}
-                {/*        onChange={(e) => setLogoOpacity(e.target.value)} />*/}
-                {/*</label>*/}
-
                 <div className={"cntr"}>
                     <label>
                         Scale:
@@ -376,13 +368,6 @@ const ImageWatermark = () => {
             )}
             </div>
 
-            {/* Image Preview */}
-            <div>
-                {/*{previewImages.map((src, index) => (*/}
-                {/*    <img key={index} src={src} alt={`watermarked-${index}`} style={{ maxWidth: '35%', marginBottom: '20px' }} />*/}
-                {/*))}*/}
-            </div>
-
             <div className="py-14">
                 <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                     <h3 className="font-semibold text-xxl-center text-white-600 text-center" style={{ marginTop:"50px", marginBottom:"35px" }}>
@@ -399,13 +384,6 @@ const ImageWatermark = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
         </div>
     );
 };

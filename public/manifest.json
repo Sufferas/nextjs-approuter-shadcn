@@ -3,7 +3,7 @@
     "background_color": "#af1fae",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/https://imageresizer.kuehhas.info/",
+    "start_url": "",
     "name": "Image Resizer by K\u00fchhas",
     "short_name": "IResizer",
     "description": "On this page, you can scale images, change formats, and place logos within your pictures.",
