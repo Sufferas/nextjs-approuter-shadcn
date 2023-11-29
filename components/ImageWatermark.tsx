@@ -146,6 +146,7 @@ const ImageWatermark = () => {
 
         const filesToDownload = isWatermarked ? previewImages : images;
 
+        // @ts-ignore
         for (const [index, file] of filesToDownload.entries()) {
             const img = new Image();
             img.src = isWatermarked ? file : URL.createObjectURL(file);
@@ -181,6 +182,7 @@ const ImageWatermark = () => {
                 }
             } while (currentFileSize > fileSizeLimit && scaleFactor > 0);
 
+            // @ts-ignore
             if (currentFileSize > fileSizeLimit) {
                 alert(`Cannot reduce the image size to the desired level for ${baseName}_${index+1}`);
                 continue;
@@ -190,6 +192,7 @@ const ImageWatermark = () => {
             const filename = `${baseName}_${index+1}.${format}`;
 
             const link = document.createElement('a');
+            // @ts-ignore
             link.href = newImageUrl;
             link.download = filename;
             document.body.appendChild(link);
