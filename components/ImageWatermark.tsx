@@ -2,7 +2,7 @@
 
 import '../css/ImageWatermark.css'
 import React, { useState } from 'react';
-import {fontSizeResolver} from "@mantine/core/lib/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver";
+// import {fontSizeResolver} from "@mantine/core/lib/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver";
 
 const ImageWatermark = () => {
 
@@ -104,32 +104,32 @@ const ImageWatermark = () => {
         setImages((prevImages) => prevImages.filter((_, index) => index !== indexToRemove));
         setUploadedImages((prevUrls) => prevUrls.filter((_, index) => index !== indexToRemove));
     };
-
-    const downloadOriginalImages = () => {
-        images.forEach((imageFile, index) => {
-            const url = URL.createObjectURL(imageFile);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `original_image_${index+1}.jpg`; // oder .png oder ein anderes Format
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    };
-
-    const downloadWatermarkedImages = () => {
-        previewImages.forEach((dataUrl, index) => {
-            const link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = `watermarked_image_${index+1}.jpg`; // oder .png oder ein anderes Format
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    };
-
+    //
+    // const downloadOriginalImages = () => {
+    //     images.forEach((imageFile, index) => {
+    //         const url = URL.createObjectURL(imageFile);
+    //         const link = document.createElement('a');
+    //         link.href = url;
+    //         link.download = `original_image_${index+1}.jpg`; // oder .png oder ein anderes Format
+    //         link.style.display = 'none';
+    //         document.body.appendChild(link);
+    //         link.click();
+    //         document.body.removeChild(link);
+    //     });
+    // };
+    //
+    // const downloadWatermarkedImages = () => {
+    //     previewImages.forEach((dataUrl, index) => {
+    //         const link = document.createElement('a');
+    //         link.href = dataUrl;
+    //         link.download = `watermarked_image_${index+1}.jpg`; // oder .png oder ein anderes Format
+    //         link.style.display = 'none';
+    //         document.body.appendChild(link);
+    //         link.click();
+    //         document.body.removeChild(link);
+    //     });
+    // };
+    //
 
 
     const [selectedFileSize, setSelectedFileSize] = useState('original');
@@ -354,6 +354,9 @@ const ImageWatermark = () => {
                             <option value="500">500 KB</option>
                             <option value="250">250 KB</option>
                             <option value="125">125 KB</option>
+                            <option value="62">62 KB</option>
+                            <option value="31">31 KB</option>
+                            <option value="15">15 KB</option>
                         </select>
                     </div>
 
